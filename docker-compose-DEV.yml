@@ -1,0 +1,34 @@
+version: "3.6"
+
+services:
+
+  # ===== React DEV =====
+  express-dev:
+    container_name: Express.js-DEVELOPMENT-container
+    build:
+      context: .
+      target: express-DEV
+    restart: always
+    tty: true
+    ports:
+      - "8000:8000"
+      - "9229:9229"
+    volumes: # For debugging purposes
+      - ./server:/code/server
+    environment:
+      # DB credentials needed to connect to the db
+      DB_NAME: ${DEV_DB_NAME}
+
+
+  react-dev:
+    container_name: React.js-DEVELOPMENT-container
+    build:
+      context: .
+      target: react-DEV
+    restart: always
+    tty: true
+    ports:
+      - "3000:3000"
+    volumes: # For debugging purposes
+      - ./src:/code/src
+      - ./public:/code/public

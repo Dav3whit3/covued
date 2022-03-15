@@ -1,0 +1,17 @@
+version: '3.6'
+
+services:
+
+  # ==== PROD =====
+  express-prod:
+    container_name: Express.js-PRODUCTION-container
+    build:
+      context: .
+      target: PROD
+    restart: always
+    tty: true
+    ports:
+      - "3000:3000"
+    environment:
+      # DB credentials needed to connect to the db
+      DB_NAME: ${PROD_DB_NAME}

@@ -17,8 +17,8 @@ while getopts "u:e:" opt; do
       echo " 🔰 Environment: $OPTARG 🔰" >&2
       docker-compose stop ;
       docker-compose down --remove-orphans ;
-      docker-compose build express-dev ;
-      docker-compose up express-dev
+      docker-compose -f docker-compose-DEV.yml build;
+      docker-compose -f docker-compose-DEV.yml up;
       
       elif [ $OPTARG = "prod" ]; then
       echo "📛 Environment: $OPTARG 📛" >&2
