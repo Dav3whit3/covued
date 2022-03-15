@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+<!-- ![alt text](static/images/home.png) -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![-----------------------------------------------------](public/img/divider.png)](#)
 
-## Available Scripts
+<details>
+<a href="#Installation"></a>
 
-In the project directory, you can run:
+<summary> :floppy_disk: &nbsp; Installation</summary>
 
-### `npm start`
+- ## :whale: &nbsp; Install Docker & Docker Compose
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  https://docs.docker.com/get-docker/  
+  https://docs.docker.com/compose/install/
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ## :closed_lock_with_key: &nbsp; Environment Variables
 
-### `npm test`
+  Atlas MongoDB environment variables for DB mapping to include in `.env` file:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  `DEV_DB_NAME`
 
-### `npm run build`
+  `PROD_DB_NAME`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  `DB_CLUSTER`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  `DB_USER`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  `DB_PASSWORD`
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- ## :wrench: &nbsp; Build and run container
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  To run the container locally you can just run the `init.sh`:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  Development environment:
+  ```bash
+  sh init.sh -e dev
+  ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  Production environment:
+  ```bash
+  sh init.sh -e prod
+  ```
 
-## Learn More
+  Heroku deploy:
+  ```bash
+  sh init.sh -u prod
+  ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  </details>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br>
 
-### Code Splitting
+<details>
+<a href="#aproach"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  <summary> :triangular_ruler: &nbsp; Approach</summary>
 
-### Analyzing the Bundle Size
+- Marke it work locally :arrow_right: &nbsp; Dockerize it
+- Document readme at each commit made
+- External app architecture. Abstract docker commands into bash scripts
+- Clear folder structure
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<br>
 
-### Making a Progressive Web App
+<details>
+<a href="#testing"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  <summary> :microscope: &nbsp; Testing</summary>
 
-### Advanced Configuration
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<br>
 
-### Deployment
+<details>
+<a href="#cud"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  <summary> :soon: &nbsp; Currently under develop</summary>
 
-### `npm run build` fails to minify
+</details>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![-----------------------------------------------------](public/img/divider.png)](#)
