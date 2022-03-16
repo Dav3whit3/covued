@@ -32,3 +32,8 @@ services:
     volumes: # For debugging purposes
       - ./src:/code/src
       - ./public:/code/public
+    healthcheck:
+      test: ["CMD", "wget -qO- localhost:8000/"]
+      interval: 10s
+      timeout: 5s
+      start_period: 60s
