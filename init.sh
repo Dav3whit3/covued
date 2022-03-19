@@ -17,15 +17,15 @@ while getopts "u:e:" opt; do
       echo " 🔰 Environment: $OPTARG 🔰" >&2
       docker-compose stop ;
       docker-compose down --remove-orphans ;
-      docker-compose -f docker-compose-DEV.yml build;
-      docker-compose -f docker-compose-DEV.yml up;
+      docker-compose -f docker-compose.yaml build ;
+      docker-compose -f docker-compose.yaml up ;
       
       elif [ $OPTARG = "prod" ]; then
       echo "📛 Environment: $OPTARG 📛" >&2
       docker-compose stop ;
       docker-compose down --remove-orphans ;
-      docker-compose build express-prod ;
-      docker-compose up express-prod
+      docker-compose -f docker-compose-PROD.yml build;
+      docker-compose -f docker-compose-PROD.yml up;
 
       else
         echo "Invalid option: -$OPTARG" >&2
