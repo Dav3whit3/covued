@@ -1,20 +1,19 @@
-import './App.css';
-import React from 'react';
+import "./App.css";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { NavBar } from '../NavBar/NavBar';
-import { SideBar } from '../SideBar/SideBar';
-import SignUpForm from '../../views/signup';
+import { SignUpForm } from "../../views/signup";
+import { HomePage } from "../../views/home.jsx";
+
 
 function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <SideBar />
-      <Routes>
+	return (
+		<div className="App">
+			<Routes>
         <Route path="signup" element={<SignUpForm />} />
-      </Routes>
-    </div>
-  );
+        <Route path="/" element={<HomePage />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;

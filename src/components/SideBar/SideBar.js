@@ -4,7 +4,7 @@ import { ListItem } from "../ListItem/ListItem";
 import { SideBarDashboard, SideBarComponents } from "./elements";
 
 
-const SideBar = () => {
+export const SideBar = () => {
   return (
     <aside id="sidebar" className="sidebar">
       <UnorderedList className="sidebar-nav" id="sidebar-nav">
@@ -250,6 +250,3 @@ const SideBar = () => {
     </aside>
   );
 };
-
-
-export { SideBar }

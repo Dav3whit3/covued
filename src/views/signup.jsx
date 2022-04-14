@@ -1,7 +1,6 @@
 import React from 'react';
 
-
-const SignUpForm = () => {
+export const SignUpForm = () => {
 	return (
 		<main>
 			<div className="container">
@@ -9,12 +8,6 @@ const SignUpForm = () => {
 					<div className="container">
 						<div className="row justify-content-center">
 							<div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-								<div className="d-flex justify-content-center py-4">
-									<a href="index.html" className="logo d-flex align-items-center w-auto">
-										<img src="/img/logo.png" alt="" />
-										<span className="d-none d-lg-block">NiceAdmin</span>
-									</a>
-								</div>
 
 								<div className="card mb-3">
 									<div className="card-body">
@@ -25,7 +18,7 @@ const SignUpForm = () => {
 
 										<form className="row g-3 needs-validation" action="/signup" method="POST">
 											<div className="col-12">
-												<label for="yourEmail" className="form-label">
+												<label htmlFor="yourEmail" className="form-label">
 													Email
 												</label>
 												<div className="input-group has-validation">
@@ -38,7 +31,7 @@ const SignUpForm = () => {
 											</div>
 
 											<div className="col-12">
-												<label for="yourPassword" className="form-label">
+												<label htmlFor="yourPassword" className="form-label">
 													Password
 												</label>
 												<input type="password" name="password" className="form-control" id="yourPassword" required />
@@ -46,7 +39,7 @@ const SignUpForm = () => {
 											</div>
 
 											<div className="col-12">
-												<label for="yourRepeatedPassword" className="form-label">
+												<label htmlFor="yourRepeatedPassword" className="form-label">
 													Repeat Password
 												</label>
 												<input type="password" name="repeatedPassword" className="form-control" id="yourRepeatedPassword" required />
@@ -70,23 +63,19 @@ const SignUpForm = () => {
 
 											<div className="col-12 text-center">
 												<a className="w-100 btn btn-lg btn-google btn-block btn-outline rounded-pill" href="/">
-													<img src="https://img.icons8.com/color/16/000000/google-logo.png" alt=""/>
+													<img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="" />
 													Signup Using Google
 												</a>
 											</div>
 
 											<p className="text-inverse text-center">
 												Already have an account?{" "}
-												<a href="/login" data-abc="true">
+												<a href="/login" data-abc="true" style={{ color: "#4154f1" }}>
 													Login
 												</a>
 											</p>
 										</form>
 									</div>
-								</div>
-
-								<div className="credits">
-									Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
 								</div>
 							</div>
 						</div>
@@ -96,5 +85,3 @@ const SignUpForm = () => {
 		</main>
 	);
 };
-
-export default SignUpForm;
