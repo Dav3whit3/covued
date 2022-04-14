@@ -1,4 +1,4 @@
-FROM node:17.6.0-alpine3.14 as main
+FROM node:16.14.2-alpine3.14 as main
 
 RUN npm install --global nodemon
 RUN npm install --global concurrently
