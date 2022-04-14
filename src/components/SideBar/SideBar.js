@@ -19,7 +19,7 @@ const SideBar = () => {
         <ListItem {...SideBarComponents} ></ListItem>
 
         {/* <li className="nav-item">
-          <a className="nav-link collapsed btn disabled" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <a className="nav-link collapsed btn disabled" data-bs-target="#components-nav" data-bs-toggle="collapse" href="/">
             <i className="bi bi-menu-button-wide"></i>
             <span>Components</span>
             <i className="bi bi-chevron-down ms-auto"></i>
@@ -101,7 +101,7 @@ const SideBar = () => {
 
 
         <li className="nav-item">
-          <a className="nav-link collapsed btn disabled" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <a className="nav-link collapsed btn disabled" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="/">
             <i className="bi bi-journal-text"></i><span>Forms</span><i className="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="forms-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -129,7 +129,7 @@ const SideBar = () => {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link collapsed btn disabled" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <a className="nav-link collapsed btn disabled" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="/">
             <i className="bi bi-layout-text-window-reverse"></i><span>Tables</span><i className="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="tables-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -147,7 +147,7 @@ const SideBar = () => {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link collapsed btn disabled" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <a className="nav-link collapsed btn disabled" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="/">
             <i className="bi bi-bar-chart"></i><span>Charts</span><i className="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="charts-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -170,7 +170,7 @@ const SideBar = () => {
         </li>
 
         <li className="nav-item">
-          <a className="nav-link collapsed btn disabled" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <a className="nav-link collapsed btn disabled" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="/">
             <i className="bi bi-gem"></i><span>Icons</span><i className="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="icons-nav" className="nav-content collapse " data-bs-parent="#sidebar-nav">

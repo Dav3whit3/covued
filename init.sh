@@ -15,9 +15,9 @@ while getopts "u:e:" opt; do
     e)
       if [ $OPTARG = "dev" ]; then
       echo " 🔰 Environment: $OPTARG 🔰" >&2
-      docker-compose -f docker-compose-DEV.yml stop;
-      docker-compose -f docker-compose-DEV.yml down --remove-orphans ;
-      docker-compose -f docker-compose-DEV.yml build ;
+      # docker-compose -f docker-compose-DEV.yml stop;
+      # docker-compose -f docker-compose-DEV.yml down --remove-orphans ;
+      # docker-compose -f docker-compose-DEV.yml build ;
       docker-compose -f docker-compose-DEV.yml up ;
       
       elif [ $OPTARG = "prod" ]; then

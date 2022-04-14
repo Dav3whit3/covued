@@ -31,7 +31,7 @@ const isUserRegistered = async (email) => {
     return userSearch;
   }
   catch (error) {
-    if (err instanceof mongoose.Error.ValidationError) {
+    if (error instanceof mongoose.Error.ValidationError) {
       return false
     }
   }
