@@ -1,6 +1,7 @@
-/* eslint-disable import/no-anonymous-default-export */
-export default {
+module.exports = {
   content: [
+    "./public/index.html",
+    "./src/index.js",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {

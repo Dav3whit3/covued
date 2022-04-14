@@ -2,8 +2,9 @@ import React from 'react';
 
 export const SignUpForm = () => {
 	return (
+
 		<main>
-			<div className="container">
+			<div className="container bg-slate-500">
 				<section className="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
 					<div className="container">
 						<div className="row justify-content-center">
@@ -64,7 +65,7 @@ export const SignUpForm = () => {
 											<div className="col-12 text-center">
 												<a className="w-100 btn btn-lg btn-google btn-block btn-outline rounded-pill" href="/">
 													<img src="https://img.icons8.com/color/16/000000/google-logo.png" alt="" />
-													Signup Using Google
+													Signup using Google
 												</a>
 											</div>
 

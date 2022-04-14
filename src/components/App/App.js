@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { SignUpForm } from "../../views/signup";
-import { HomePage } from "../../views/home.jsx";
+import { HomePage } from "../../views/home";
 
 
 function App() {
