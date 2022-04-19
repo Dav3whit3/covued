@@ -4,7 +4,7 @@ export const SignUpForm = () => {
 	return (
 
 		<main>
-			<div className="container bg-slate-500">
+			<div className="container">
 				<section className="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
 					<div className="container">
 						<div className="row justify-content-center">

@@ -13,5 +13,4 @@ services:
     ports:
       - "3000:3000"
     environment:
-      # DB credentials needed to connect to the db
       DB_NAME: ${PROD_DB_NAME}

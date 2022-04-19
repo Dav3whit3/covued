@@ -466,25 +466,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-sepia:  ;
 }
 
-/* @font-face {
+@font-face {
   font-family: Poppins-Regular;
-  src: url('/fonts/poppins/Poppins-Regular.ttf'); 
+
+  src: url('/fonts/poppins/Poppins-Regular.ttf');
 }
 
 @font-face {
   font-family: Poppins-Medium;
-  src: url('/fonts/poppins/Poppins-Medium.ttf'); 
+
+  src: url('/fonts/poppins/Poppins-Medium.ttf');
 }
 
 @font-face {
   font-family: Poppins-Bold;
-  src: url('/fonts/poppins/Poppins-Bold.ttf'); 
+
+  src: url('/fonts/poppins/Poppins-Bold.ttf');
 }
 
 @font-face {
   font-family: Poppins-SemiBold;
-  src: url('/fonts/poppins/Poppins-SemiBold.ttf'); 
-} */
+
+  src: url('/fonts/poppins/Poppins-SemiBold.ttf');
+}
 
 * {
   margin: 0px;
@@ -495,6 +499,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 body, html {
   height: 100%;
   font-family: Poppins-Regular, sans-serif;
+  background-image: url("/img/hero@75.4dea7abe609fc522c039fba7662ceea2.jpg");
+  background-size: 100% 100%
 }
 
 a:focus {
@@ -535,3 +541,17 @@ input {
   outline: none;
   border: none;
 }
+
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top,var(--tw-gradient-stops))
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right,var(--tw-gradient-stops))
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom,var(--tw-gradient-stops))
+}
+
+
