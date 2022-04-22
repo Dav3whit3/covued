@@ -1,6 +1,6 @@
 [![-----------------------------------------------------](client/public/img/divider.png)](#)
 
-<details>
+<details open="true">
 <a href="#Installation"></a>
 
 <summary> :floppy_disk: &nbsp; Installation</summary>
