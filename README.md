@@ -51,7 +51,7 @@
 
 <br>
 
-<details>
+<details open="true">
 <a href="#aproach"></a>
 
   <summary> :triangular_ruler: &nbsp; Approach</summary>
@@ -66,7 +66,7 @@
 
 <br>
 
-<details>
+<details open="true">
 <a href="#testing"></a>
 
   <summary> :microscope: &nbsp; Testing</summary>
@@ -77,7 +77,7 @@
 
 <br>
 
-<details>
+<details open="true">
 <a href="#cud"></a>
 
   <summary> :soon: &nbsp; Currently under develop</summary>
