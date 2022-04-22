@@ -32,9 +32,11 @@
   "scripts": {
     "express-start": "ts server.ts",
     "express-dev": "nodemon --exec 'node --inspect=0.0.0.0:9229 --require ts-node/register server.ts'"
-    
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.25"
+  }
 }
