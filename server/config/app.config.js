@@ -24,10 +24,6 @@ export const config = (app) => {
 	app.use(express.urlencoded({ extended: false }));
 	app.use(cookieParser());
 
-
-	// Handles access to the public folder
-	//app.use(express.static(path.join(__dirname, "../..", "public")));
-
 	// Session config
 	app.use(expressSession);
 	passportSession()
