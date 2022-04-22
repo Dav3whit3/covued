@@ -1,12 +1,11 @@
 <!-- ![alt text](static/images/home.png) -->
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#)
-
 <details>
 <a href="#Installation"></a>
 
 <summary> :floppy_disk: &nbsp; Installation</summary>
 
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#)
 - ## :whale: &nbsp; Install Docker & Docker Compose
 
   https://docs.docker.com/get-docker/  
@@ -26,22 +25,24 @@
 
   `DB_PASSWORD`
 
-
 - ## :wrench: &nbsp; Build and run container
 
   To run the container locally you can just run the `init.sh`:
 
   Development environment:
+
   ```bash
   sh init.sh -e dev
   ```
 
   Production environment:
+
   ```bash
   sh init.sh -e prod
   ```
 
   Heroku deploy:
+
   ```bash
   sh init.sh -u prod
   ```
@@ -54,6 +55,8 @@
 <a href="#aproach"></a>
 
   <summary> :triangular_ruler: &nbsp; Approach</summary>
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#)
 
 - Marke it work locally :arrow_right: &nbsp; Dockerize it
 - Document readme at each commit made
@@ -68,6 +71,8 @@
 
   <summary> :microscope: &nbsp; Testing</summary>
 
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#)
+
 </details>
 
 <br>
@@ -76,6 +81,8 @@
 <a href="#cud"></a>
 
   <summary> :soon: &nbsp; Currently under develop</summary>
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#)
 
 </details>
 
