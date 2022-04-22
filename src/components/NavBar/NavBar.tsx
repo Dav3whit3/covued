@@ -1,6 +1,6 @@
 import React from "react";
 
-export const NavBar = (props) => {
+export const NavBar = (props: any) => {
 	return (
 		<header id="header" className="header fixed-top d-flex align-items-center">
 			<div className="d-flex align-items-center justify-content-between">

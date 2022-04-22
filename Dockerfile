@@ -19,6 +19,11 @@ COPY --chown=master:master /public /code/public/
 COPY --chown=master:master /server /code/server/
 
 COPY --chown=master:master package.json /code/
+COPY --chown=master:master tsconfig.json /code/
+
+COPY --chown=master:master postcss.config.js /code/
+COPY --chown=master:master tailwind.config.js /code/
+
 COPY --chown=master:master .env /code/
 
 RUN npm install
