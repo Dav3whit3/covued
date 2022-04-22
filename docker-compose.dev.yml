@@ -13,9 +13,12 @@ services:
       - "9229:9229"
     volumes:
       - ./server:/server
+      - /server/node_modules
     environment:
       DB_NAME: ${DEV_DB_NAME}
-
+      DB_CLUSTER: ${DB_CLUSTER}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
 
   react-dev:
     container_name: React.js-DEVELOPMENT-container
@@ -27,6 +30,7 @@ services:
       - "3000:3000"
     volumes:
       - ./client:/client
+      - /client/node_modules
     healthcheck:
       test: ["CMD", "wget -qO- localhost:8000/"]
       interval: 10s
