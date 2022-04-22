@@ -14,14 +14,6 @@ import { passportSession } from "./passport.config.js";
 
 import passport from "passport";
 
-// ℹ️ global package used to `normalize` paths amongst different operating systems
-// https://www.npmjs.com/package/path
-import path from "path";
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
 // Middleware configuration
 export const config = (app) => {
 	// In development environment the app logs

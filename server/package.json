@@ -2,17 +2,16 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
-  "type": "module",
+  "main": "server.ts",
   "nodemonConfig": {
     "events": {
       "restart": "clear"
     },
     "watch": [
-      "server.js",
-      "src/"
+      "server.ts",
+      "./"
     ],
-    "ext": "js"
+    "ext": "js, ts"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -27,11 +26,13 @@
     "morgan": "^1.10.0",
     "passport": "^0.5.2",
     "passport-local": "^1.0.0",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "ts-node": "^10.7.0"
   },
   "scripts": {
-    "express-start": "node server.js",
-    "express-dev": "nodemon --inspect=0.0.0.0:9229 server.js"
+    "express-start": "ts server.ts",
+    "express-dev": "nodemon --exec 'node --inspect=0.0.0.0:9229 --require ts-node/register server.ts'"
+    
   },
   "keywords": [],
   "author": "",
