@@ -4,7 +4,7 @@ RUN npm install --global nodemon
 
 WORKDIR /server
 
-COPY package.json ./
+COPY package*.json ./
 
 RUN npm install
 
