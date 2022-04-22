@@ -9,13 +9,13 @@ import logger from "morgan";
 
 import cookieParser from "cookie-parser";
 
-import { expressSession } from "./session.config.js";
-import { passportSession } from "./passport.config.js";
+//import { expressSession } from "./session.config.js";
+//import { passportSession } from "./passport.config";
 
 import passport from "passport";
 
 // Middleware configuration
-export const config = (app) => {
+export const config = (app: express.Application) => {
 	// In development environment the app logs
 	app.use(logger("dev"));
 
@@ -25,8 +25,8 @@ export const config = (app) => {
 	app.use(cookieParser());
 
 	// Session config
-	app.use(expressSession);
-	passportSession()
+	//app.use(expressSession);
+	//passportSession()
 
 	app.use(passport.initialize());
 	app.use(passport.session());

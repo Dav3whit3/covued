@@ -1,4 +1,5 @@
-import { User } from "../models/User.model.js";
+export {}
+/* import { User } from "../models/User.model.js";
 import passport from "passport";
 import { Strategy as LocalStrategy } from "passport-local";
 import { MONGO_URI } from "./db.config.js";
@@ -40,4 +41,4 @@ const passportSession = () => {
 };
 
 
-export { passportSession }
+export { passportSession } */

@@ -9,22 +9,23 @@ const MONGO_URI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWOR
 @${process.env.DB_CLUSTER}\
 .0o2bu.mongodb.net/${process.env.DB_NAME}`;
 
-mongoose
-	.connect(MONGO_URI)
-	.then((x) => {
+
+const dbConnection = async (mongoUri: string): Promise<any> => {
+	try {
+		const conn = await mongoose.connect(mongoUri);
 		console.log(`
-  🍀  Connected to Mongo! Database name: "${x.connections[0].name}" 🍀\n`
-		)
-	})
-	.catch((err) => {
-		console.error("Error connecting to mongo: ", err);
+	🍀  Connected to Mongo! Database name: "${conn.connections[0].name}" 🍀\n`);
+	} catch (error) {
+		console.error("Error connecting to mongo: ", error);
+	}
+
+	process.on("SIGINT", function () {
+		mongoose.connection.close(function () {
+			console.log("Force to close the MongoDB conection");
+			process.exit(0);
+		});
 	});
+};
 
-	process.on('SIGINT', function() {
-    mongoose.connection.close(function () {
-        console.log('Force to close the MongoDB conection');
-        process.exit(0);
-    });
-});
 
-export { MONGO_URI }
+export {dbConnection, MONGO_URI };
