@@ -1,4 +1,4 @@
-<!-- ![alt text](static/images/home.png) -->
+[![-----------------------------------------------------](public/img/divider.png)](#)
 
 <details>
 <a href="#Installation"></a>
@@ -86,4 +86,4 @@
 
 </details>
 
-[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)](#)
+[![-----------------------------------------------------](public/img/divider.png)](#)
