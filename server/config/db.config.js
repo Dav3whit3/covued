@@ -9,8 +9,6 @@ const MONGO_URI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWOR
 @${process.env.DB_CLUSTER}\
 .0o2bu.mongodb.net/${process.env.DB_NAME}`;
 
-console.log(MONGO_URI)
-
 mongoose
 	.connect(MONGO_URI)
 	.then((x) => {
