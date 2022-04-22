@@ -8,10 +8,6 @@ import logger from "morgan";
 // https://www.npmjs.com/package/cookie-parser
 
 import cookieParser from "cookie-parser";
-// ℹ️ Serves a custom favicon on each request
-// https://www.npmjs.com/package/serve-favicon
-import favicon from "serve-favicon";
-
 
 import { expressSession } from "./session.config.js";
 import { passportSession } from "./passport.config.js";
@@ -40,8 +36,6 @@ export const config = (app) => {
 	// Handles access to the public folder
 	//app.use(express.static(path.join(__dirname, "../..", "public")));
 
-	// Handles access to the favicon
-	//app.use(favicon(path.join(__dirname, "../..", "public", "img", "favicon.ico")));
 	// Session config
 	app.use(expressSession);
 	passportSession()

@@ -5,30 +5,32 @@ services:
   express-dev:
     container_name: Express.js-DEVELOPMENT-container
     build:
-      context: .
-      target: express-DEV
+      context: "./server"
+      dockerfile: Dockerfile
     restart: always
     ports:
       - "8000:8000"
       - "9229:9229"
-    volumes: # For debugging purposes
-      - ./server:/code/server
+    volumes:
+      - ./server:/server
+      - /server/node_modules
     environment:
-      # DB credentials needed to connect to the db
       DB_NAME: ${DEV_DB_NAME}
-
+      DB_CLUSTER: ${DB_CLUSTER}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
 
   react-dev:
     container_name: React.js-DEVELOPMENT-container
     build:
-      context: .
-      target: react-DEV
+      context: "./client"
+      dockerfile: Dockerfile
     restart: always
     ports:
       - "3000:3000"
-    volumes: # For debugging purposes
-      - ./src:/code/src
-      - ./public:/code/public
+    volumes:
+      - ./client:/client
+      - /client/node_modules
     healthcheck:
       test: ["CMD", "wget -qO- localhost:8000/"]
       interval: 10s
