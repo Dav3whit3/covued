@@ -15,7 +15,7 @@ import cookieParser from "cookie-parser";
 //import passport from "passport";
 
 // Middleware configuration
-export const config = (app: express.Application) => {
+export const appConfig = (app: express.Application): void => {
 	// In development environment the app logs
 	app.use(logger("dev"));
 

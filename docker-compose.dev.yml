@@ -11,6 +11,9 @@ services:
     ports:
       - "8000:8000"
       - "9229:9229"
+    volumes:
+      - ./server/:/server/
+      - /server/node_modules
 
     environment:
       DB_NAME: ${DEV_DB_NAME}
