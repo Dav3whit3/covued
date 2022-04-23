@@ -17,6 +17,7 @@ services:
       DB_CLUSTER: ${DB_CLUSTER}
       DB_USER: ${DB_USER}
       DB_PASSWORD: ${DB_PASSWORD}
+      PORT: ${PORT}
 
   react-dev:
     container_name: React.js-DEVELOPMENT-container

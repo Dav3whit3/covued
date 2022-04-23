@@ -12,7 +12,7 @@ import cookieParser from "cookie-parser";
 //import { expressSession } from "./session.config.js";
 //import { passportSession } from "./passport.config";
 
-import passport from "passport";
+//import passport from "passport";
 
 // Middleware configuration
 export const config = (app: express.Application) => {
@@ -22,12 +22,13 @@ export const config = (app: express.Application) => {
 	// To have access to `body` property in the request
 	app.use(express.json());
 	app.use(express.urlencoded({ extended: false }));
+	
 	app.use(cookieParser());
 
 	// Session config
 	//app.use(expressSession);
 	//passportSession()
 
-	app.use(passport.initialize());
-	app.use(passport.session());
+	//app.use(passport.initialize());
+	//app.use(passport.session());
 };
