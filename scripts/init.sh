@@ -15,6 +15,7 @@ while getopts "u:e:" opt; do
     e)
       if [ $OPTARG = "dev" ]; then
       echo " 🔰 Environment: $OPTARG 🔰" >&2
+      docker system prune -a -f ;
       docker-compose -f docker-compose.dev.yml stop;
       docker-compose -f docker-compose.dev.yml down --remove-orphans ;
       docker-compose -f docker-compose.dev.yml build ;
@@ -22,6 +23,7 @@ while getopts "u:e:" opt; do
       
       elif [ $OPTARG = "prod" ]; then
       echo "📛 Environment: $OPTARG 📛" >&2
+      docker system prune -a -f ;
       docker-compose -f docker-compose.prod.yml stop ;
       docker-compose -f docker-compose.prod.yml down --remove-orphans ;
       docker-compose -f docker-compose.prod.yml build;

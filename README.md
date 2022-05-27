@@ -1,4 +1,4 @@
-[![-----------------------------------------------------](client/public/img/divider.png)](#)
+[![-----------------------------------------------------](client/static/img/divider.png)](#)
 
 <details open="true">
 <a href="#Installation"></a>
@@ -86,4 +86,4 @@
 
 </details>
 
-[![-----------------------------------------------------](client/public/img/divider.png)](#)
+[![-----------------------------------------------------](client/static/img/divider.png)](#)

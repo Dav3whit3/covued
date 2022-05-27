@@ -1,6 +1,6 @@
 FROM node:16.14.2-alpine3.14 as main
 
-RUN npm install --global concurrently
+# RUN npm install --global concurrently
 
 WORKDIR /client
 
@@ -10,4 +10,4 @@ RUN npm install
 
 COPY . .
 
-CMD npx concurrently npm:react-start
+CMD npm run dev
