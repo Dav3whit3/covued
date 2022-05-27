@@ -1,0 +1,35 @@
+version: "3.6"
+
+services:
+  api:
+    container_name: Express-DEVELOPMENT-container
+    build: "./server"
+    restart: always
+    ports:
+      - "${BACKEND_PORT}:${BACKEND_PORT}"
+      - "9229:9229"
+    volumes:
+      - ./server/:/server/
+      - /server/node_modules
+    environment:
+      DB_NAME: ${DB_NAME}
+      DB_CLUSTER: ${DB_CLUSTER}
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      BACKEND_PORT: ${BACKEND_PORT}
+
+  client:
+    container_name: Vue-DEVELOPMENT-container
+    build: "./client"
+    tty: true
+    restart: always
+    ports:
+      - "${CLIENT_PORT}:${CLIENT_PORT}"
+    healthcheck:
+      test: ["CMD", "wget -qO- localhost:${BACKEND_PORT}/"]
+      interval: 10s
+      timeout: 5s
+      start_period: 60s
+    environment:
+      CLIENT_PORT: ${CLIENT_PORT}
+      CLIENT_HOST: ${CLIENT_HOST}
