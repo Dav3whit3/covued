@@ -2,8 +2,6 @@ import colors from 'vuetify/es5/util/colors'
 import { env } from "process";
 
 
-console.log(`Client Port is: ${env.CLIENT_PORT}`)
-
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -24,7 +22,7 @@ export default {
   },
 
   server: {
-    host: 'localhost',
+    host: env.CLIENT_HOST,
     port: env.CLIENT_PORT
   },
 

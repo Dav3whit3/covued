@@ -1,7 +1,5 @@
 FROM node:16.14.2-alpine3.14 as main
 
-# RUN npm install --global concurrently
-
 WORKDIR /client
 
 COPY package*.json ./

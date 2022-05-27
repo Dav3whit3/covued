@@ -16,25 +16,16 @@ while getopts "u:e:" opt; do
       if [ $OPTARG = "dev" ]; then
       echo " 🔰 Environment: $OPTARG 🔰" >&2
       docker system prune -a -f ;
-      docker-compose -f docker-compose.dev.yml stop;
-      docker-compose -f docker-compose.dev.yml down --remove-orphans ;
-      docker-compose -f docker-compose.dev.yml build ;
-      docker-compose -f docker-compose.dev.yml up ;
+      docker-compose stop;
+      docker-compose down --remove-orphans ;
+      docker-compose build ;
+      docker-compose up ;
       
-      elif [ $OPTARG = "prod" ]; then
-      echo "📛 Environment: $OPTARG 📛" >&2
-      docker system prune -a -f ;
-      docker-compose -f docker-compose.prod.yml stop ;
-      docker-compose -f docker-compose.prod.yml down --remove-orphans ;
-      docker-compose -f docker-compose.prod.yml build;
-      docker-compose -f docker-compose.prod.yml up;
-
       else
         echo "Invalid option: -$OPTARG" >&2
       fi
       ;;
     
-
     # ==== HEROKU Deploy ===== #
     u)    
       if [ $OPTARG = "prod" ]; then
