@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 
 
 export const errorsConfig = (app: express.Application): void => {
-  app.use((req: Request, res: Response, next: NextFunction) => {
+  app.use((req: Request, res: Response, next: NextFunction): void => {
     next(createError(404, "Route not found"));
   });
 

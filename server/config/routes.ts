@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import * as signUpController from '../controllers/auth/signup'
 import * as loginController from '../controllers/auth/login'
+import * as authMiddleware from '../middleware/auth.middleware'
 
 
 const router = express.Router();
