@@ -19,12 +19,15 @@ services:
       BACKEND_PORT: ${BACKEND_PORT}
 
   client:
-    container_name: Vue-DEVELOPMENT-container
+    container_name: Svelte-DEVELOPMENT-container
     build: "./client"
     tty: true
     restart: always
     ports:
       - "${CLIENT_PORT}:${CLIENT_PORT}"
+    volumes:
+      - ./client:/client/
+      - /client/node_modules
     healthcheck:
       test: ["CMD", "wget -qO- localhost:${BACKEND_PORT}/"]
       interval: 10s
